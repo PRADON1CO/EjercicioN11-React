@@ -1,11 +1,15 @@
 import Noticia from "./Noticia";
 
-const ListaNoticias = () => {
-    return (
-        <div className="row my-2">
-            <Noticia></Noticia>
-        </div>
-    );
+const ListaNoticias = ({ noticias }) => {
+  console.log('hola tods')
+  console.log(noticias)
+
+  return (
+    <div className="row my-2">
+      {/* {noticias.map(() => (<Noticia/>))} */}
+      
+    </div>
+  );
 };
 
 export default ListaNoticias;

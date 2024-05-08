@@ -1,15 +1,5 @@
-
-const Formulario = () => {
-  const arrayCategorias = [
-    "business",
-    "entertainment",
-    "general",
-    "health",
-    "science",
-    "sports",
-    "technology",
-    "politics"
-  ];
+ 
+const Formulario = ({consultarAPI, arrayCategorias}) => {
 
   return (
     <div className="py-2">
@@ -19,6 +9,9 @@ const Formulario = () => {
         </label>
         <select
           name="categoria"
+          onChange={(event) => {
+            consultarAPI(event.target.value);
+          }}
         >
           {arrayCategorias.map((cat) => (
             <option value={cat} key={cat}>
